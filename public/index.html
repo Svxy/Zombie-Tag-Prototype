@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<noscript>
+    Please enable JavaScript.
+</noscript>
+<body>
+    <canvas width="1200" height="550" id="game" ></canvas>
+    <form autocomplete="on">
+        <div class="form-container">
+            <p id="text">Enter a Nickname to join the game.</p>
+            <input type="text" id="nickname" placeholder="Enter a Nickname" autofocus required />
+            <input id="button" type="submit" value="Enter" />
+        </div>
+        <p id="text">Fancy some P pushing?</p>
+    </form>
+    <audio id="p" controls autoplay loop>
+        <source id="song" src="assets/songs/P.mp3" >
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        var audio = document.getElementById("p");
+        audio.volume = 0.1;
+      </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
